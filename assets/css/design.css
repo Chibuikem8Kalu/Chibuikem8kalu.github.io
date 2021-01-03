@@ -1,0 +1,47 @@
+.info{
+  display: flex;
+  justify-content: center;
+}
+
+.band{
+  text-align: center;
+  line-height: 40px!important;
+  width: 40px!important;
+  background-color: #00003C; 
+  border: 1px #00003C solid;
+  color: white;
+}
+
+.tbox,.btn{
+  border: none;
+  outline: none;
+}
+
+.tbox{
+  width: 0;
+  color: #116F76;
+}
+
+.btn{
+  background-color: #00003C!important;
+  text-transform: uppercase!important;
+  color: white!important;
+  cursor: pointer!important;
+  padding: 0 10px;
+}
+
+
+.info:hover > .tbox,.tbox:focus{
+  width: 260px;
+  padding: 0 10px;
+  border: 1px solid #00003C;
+}
+
+.dir{
+  text-align: center;
+}
+
+.polio{
+  width: 75px;
+  height: 75px;
+}
