@@ -3028,19 +3028,18 @@
 	}
 
 	#footer .copyright {
-		color: #bbb;
-		font-size: 0.8em;
+		font-size: 1em;
 		margin: 0 0 2em 0;
 		padding: 0;
 	}
 
 		#footer .copyright a {
-			color: #bbb;
+			color: #00f;
 			text-decoration: none;
 		}
 
 			#footer .copyright a:hover {
-				color: #bbb;
+				color: #5385c1;
 				text-decoration: underline;
 			}
 
