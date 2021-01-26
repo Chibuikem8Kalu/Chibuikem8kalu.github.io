@@ -27,7 +27,7 @@
 				<p>Dedicated to Humanitarian Service.</p>
 				 <a href="#main" class="more">Learn More</a>
 			</section>
-</body>
+
 
 <div id="main">
 		<section id="one" class="wrapper">
@@ -98,6 +98,14 @@
 				</div>
 			</section>
 </div>
+	
+	<div id="cookie-container" class="hidden" >
+  	<h3>Cookies</h3>  
+  	<p>By continuing to use this website, you automatically accept that we use cookies.<a href="policy.html" target="blank">What For?</a></p>
+  	<button class="cookie-btn" id="accept">
+		I Understand
+	</button>
+  </div>
 	<footer id="footer">
 				<div class="inner">
 					<div class="flex">
@@ -117,5 +125,44 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+const cookieStorage = {
+		getItem: (key) => {
+			const cookies = document.cookie
+			.split(';')
+			.map(cookie => cookie.split('='))
+			.reduce((acc, [key,value]) => ({...acc, [key.trim()]: value }), {});
+			return cookies [key];
+		},
+		setItem: (key, value) => {
+			document.cookie = `${key}=${value}` ;
+		},
+	};
+	const storageType = cookieStorage ;
+	const propertyName = 'interact_consent';
+     
 
+	const shouldShowPopup = () => !storageType.getItem(propertyName);
+	const saveToStorage = () => storageType.setItem(propertyName, true);
+
+	window.onload = () => {
+		const consentPopup = document.getElementById("cookie-container");
+		const acceptBtn = document.getElementById("accept");
+
+		const acceptFn = event => {
+			saveToStorage(storageType);
+			consentPopup.classList.add("hidden");
+		};
+
+		acceptBtn.addEventListener("click", acceptFn);
+
+
+
+		if (shouldShowPopup(storageType)) {
+			consentPopup.classList.remove("hidden");
+	
+		}
+	};
+</script>
+	</body>
 </html>
