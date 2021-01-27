@@ -99,7 +99,8 @@
 			</section>
 </div>
 	
-	<div id="cookie-container" class="hidden" >
+	<div id="cookie-container" class="hidden icons" >
+		<a href="#" class="btn-close icon fa-close"></a>
   	<h3>Cookies</h3>  
   	<p>By continuing to use this website, you automatically accept that we use cookies.<a href="policy.html" target="blank">What For?</a></p>
   	<button class="cookie-btn" id="accept">
@@ -125,6 +126,21 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+				var modal = document.getElementById("cookie-container");
+				var span = document.getElementsByClassName("btn-close")[0];
+				span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function() {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+			</script>
+	
 	<script type="text/javascript">
 const cookieStorage = {
 		getItem: (key) => {
