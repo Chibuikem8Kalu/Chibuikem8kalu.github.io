@@ -72,7 +72,7 @@
 
 .recent{
   background-color: #5386c6;
-  padding: 0.95em;
+  padding: 0.9em;
 }
 
 .recent a{
@@ -86,8 +86,8 @@
 
 @keyframes reveal {
   from {
-    margin-left: -40%;
-    width: 200%;
+    margin-left: 100%;
+    width: 300%;
     opacity: 0;
   }
 
