@@ -1,0 +1,73 @@
+:root{
+  --background: #5385c2;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.tab {
+   display:flex;
+   justify-content:space-evenly;
+   background-color: var(--background);
+   height: 60px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  margin-top: 15px;
+    text-align : center;
+    background-color: #FFF;
+    height: 30px;
+    width: 60px;
+    border-radius: 10%;
+    border-width: 0px;
+    color: #5385c1;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  	color: white;
+	background-color: rgb(145 35 235);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    color: white;
+	background-color: var(--background);
+}
+
+/* Style the tab content */
+.tabcontent {
+  background-color:#17787bab ;
+  border-left: none;
+  height: 100vh;
+  display: none;
+}
+
+.books{
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  gap: 1em;
+}
+
+.books > a{
+  padding: 3.4em;
+  background-color: blueviolet;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+#banner_book{
+  background-image: url(../../images/banner2.jpg);
+  background-size: cover;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+}
